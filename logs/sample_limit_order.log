@@ -1,0 +1,149 @@
+2026-07-01 16:02:11 | DEBUG    | bot.demo | DEBUG line (file only)
+2026-07-01 16:02:11 | INFO     | bot.demo | INFO line (console + file)
+2026-07-01 16:02:11 | WARNING  | bot.demo | WARNING line
+2026-07-01 16:02:11 | ERROR    | bot.demo | ERROR line
+2026-07-01 16:03:07 | INFO     | bot.demo | this must appear exactly once on the console
+2026-07-01 16:03:42 | WARNING  | urllib3 | should appear
+2026-07-01 16:08:27 | INFO     | bot.client | Initialized Binance Futures client (testnet=True)
+2026-07-01 16:08:27 | INFO     | bot.client | Placing order: BUY MARKET BTCUSDT qty=0.002
+2026-07-01 16:08:27 | DEBUG    | bot.client | futures_create_order request params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.002}
+2026-07-01 16:08:29 | INFO     | bot.client | Order accepted: orderId=18215674238 status=NEW
+2026-07-01 16:08:29 | DEBUG    | bot.client | futures_create_order response: {'orderId': 18215674238, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ3c2651d36f086e713dea5b', 'price': '0.00', 'origQty': '0.0020', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782902309215}
+2026-07-01 16:09:13 | INFO     | bot.client | Initialized Binance Futures client (testnet=True)
+2026-07-01 16:09:13 | INFO     | bot.client | Placing order: BUY MARKET NOTAREALPAIR qty=1
+2026-07-01 16:09:13 | DEBUG    | bot.client | futures_create_order request params: {'symbol': 'NOTAREALPAIR', 'side': 'BUY', 'type': 'MARKET', 'quantity': 1}
+2026-07-01 16:09:13 | ERROR    | bot.client | API error placing order: APIError(code=-1121): Invalid symbol.
+2026-07-01 16:14:30 | INFO     | bot.client | Initialized Binance Futures client (testnet=True)
+2026-07-01 16:16:47 | INFO     | bot.client | Initialized Binance Futures client (testnet=True)
+2026-07-01 16:16:47 | DEBUG    | bot.client | futures_exchange_info returned 722 symbols
+2026-07-01 16:19:11 | INFO     | bot.client | Initialized Binance Futures client (testnet=True)
+2026-07-01 16:19:12 | DEBUG    | bot.client | futures_exchange_info returned 722 symbols
+2026-07-01 16:19:12 | INFO     | bot.orders | Order request summary:
+──────── ORDER REQUEST ────────
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : LIMIT
+  Quantity   : 0.002
+  Price      : 52788.5
+───────────────────────────────
+2026-07-01 16:19:12 | INFO     | bot.client | Placing order: BUY LIMIT BTCUSDT qty=0.002 price=52788.5
+2026-07-01 16:19:12 | DEBUG    | bot.client | futures_create_order request params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.002, 'price': 52788.5, 'timeInForce': 'GTC'}
+2026-07-01 16:19:12 | INFO     | bot.client | Order accepted: orderId=18217486342 status=NEW
+2026-07-01 16:19:12 | DEBUG    | bot.client | futures_create_order response: {'orderId': 18217486342, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ20bd02a31c8ef710783549', 'price': '52788.50', 'origQty': '0.0020', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782902952313}
+2026-07-01 16:19:12 | INFO     | bot.orders | Order response details:
+──────── ORDER RESPONSE ───────
+  Order ID     : 18217486342
+  Status       : NEW
+  Orig Qty     : 0.0020
+  Executed Qty : 0.0000
+  Avg Price    : n/a
+───────────────────────────────
+2026-07-01 16:22:03 | INFO     | bot.client | Initialized Binance Futures client (testnet=True)
+2026-07-01 16:22:04 | DEBUG    | bot.client | futures_exchange_info returned 722 symbols
+2026-07-01 16:22:04 | INFO     | bot.orders | Order request summary:
+──────── ORDER REQUEST ────────
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : MARKET
+  Quantity   : 0.002
+───────────────────────────────
+2026-07-01 16:22:04 | INFO     | bot.client | Placing order: BUY MARKET BTCUSDT qty=0.002
+2026-07-01 16:22:04 | DEBUG    | bot.client | futures_create_order request params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.002}
+2026-07-01 16:22:04 | INFO     | bot.client | Order accepted: orderId=18217963960 status=NEW
+2026-07-01 16:22:04 | DEBUG    | bot.client | futures_create_order response: {'orderId': 18217963960, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJbe234d4a0b620285c2e8d0', 'price': '0.00', 'origQty': '0.0020', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782903124268}
+2026-07-01 16:22:04 | INFO     | bot.orders | Order response details:
+──────── ORDER RESPONSE ───────
+  Order ID     : 18217963960
+  Status       : NEW
+  Orig Qty     : 0.0020
+  Executed Qty : 0.0000
+  Avg Price    : n/a
+───────────────────────────────
+2026-07-01 16:23:25 | INFO     | bot.client | Initialized Binance Futures client (testnet=True)
+2026-07-01 16:23:26 | DEBUG    | bot.client | futures_exchange_info returned 722 symbols
+2026-07-01 16:23:26 | INFO     | bot.orders | Order request summary:
+──────── ORDER REQUEST ────────
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : LIMIT
+  Quantity   : 0.002
+  Price      : 50000.0
+───────────────────────────────
+2026-07-01 16:23:26 | INFO     | bot.client | Placing order: BUY LIMIT BTCUSDT qty=0.002 price=50000.0
+2026-07-01 16:23:26 | DEBUG    | bot.client | futures_create_order request params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.002, 'price': 50000.0, 'timeInForce': 'GTC'}
+2026-07-01 16:23:26 | INFO     | bot.client | Order accepted: orderId=18218213058 status=NEW
+2026-07-01 16:23:26 | DEBUG    | bot.client | futures_create_order response: {'orderId': 18218213058, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJdd31a8c7f2cd7320b66612', 'price': '50000.00', 'origQty': '0.0020', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782903206376}
+2026-07-01 16:23:26 | INFO     | bot.orders | Order response details:
+──────── ORDER RESPONSE ───────
+  Order ID     : 18218213058
+  Status       : NEW
+  Orig Qty     : 0.0020
+  Executed Qty : 0.0000
+  Avg Price    : n/a
+───────────────────────────────
+2026-07-01 16:23:37 | INFO     | bot.client | Initialized Binance Futures client (testnet=True)
+2026-07-01 16:23:37 | ERROR    | __main__ | Order failed: Price is required for LIMIT orders.
+2026-07-01 16:24:19 | INFO     | bot.client | Initialized Binance Futures client (testnet=True)
+2026-07-01 16:24:19 | DEBUG    | bot.client | futures_exchange_info returned 722 symbols
+2026-07-01 16:24:19 | INFO     | bot.orders | Order request summary:
+──────── ORDER REQUEST ────────
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : MARKET
+  Quantity   : 0.002
+───────────────────────────────
+2026-07-01 16:24:19 | INFO     | bot.client | Placing order: BUY MARKET BTCUSDT qty=0.002
+2026-07-01 16:24:19 | DEBUG    | bot.client | futures_create_order request params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.002}
+2026-07-01 16:24:20 | INFO     | bot.client | Order accepted: orderId=18218376473 status=NEW
+2026-07-01 16:24:20 | DEBUG    | bot.client | futures_create_order response: {'orderId': 18218376473, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ52fe6341d08a911d5a4a75', 'price': '0.00', 'origQty': '0.0020', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782903260241}
+2026-07-01 16:24:20 | INFO     | bot.orders | Order response details:
+──────── ORDER RESPONSE ───────
+  Order ID     : 18218376473
+  Status       : NEW
+  Orig Qty     : 0.0020
+  Executed Qty : 0.0000
+  Avg Price    : n/a
+───────────────────────────────
+2026-07-01 17:07:02 | INFO     | bot.client | Initialized Binance Futures client (testnet=True)
+2026-07-01 17:07:03 | DEBUG    | bot.client | futures_exchange_info returned 722 symbols
+2026-07-01 17:07:03 | INFO     | bot.orders | Order request summary:
+──────── ORDER REQUEST ────────
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : MARKET
+  Quantity   : 0.002
+───────────────────────────────
+2026-07-01 17:07:03 | INFO     | bot.client | Placing order: BUY MARKET BTCUSDT qty=0.002
+2026-07-01 17:07:03 | DEBUG    | bot.client | futures_create_order request params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.002}
+2026-07-01 17:07:03 | INFO     | bot.client | Order accepted: orderId=18226033784 status=NEW
+2026-07-01 17:07:03 | DEBUG    | bot.client | futures_create_order response: {'orderId': 18226033784, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ56521928a54e79222b99f6', 'price': '0.00', 'origQty': '0.0020', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782905823415}
+2026-07-01 17:07:03 | INFO     | bot.orders | Order response details:
+──────── ORDER RESPONSE ───────
+  Order ID     : 18226033784
+  Status       : NEW
+  Orig Qty     : 0.0020
+  Executed Qty : 0.0000
+  Avg Price    : n/a
+───────────────────────────────
+2026-07-01 17:07:14 | INFO     | bot.client | Initialized Binance Futures client (testnet=True)
+2026-07-01 17:07:15 | DEBUG    | bot.client | futures_exchange_info returned 722 symbols
+2026-07-01 17:07:15 | INFO     | bot.orders | Order request summary:
+──────── ORDER REQUEST ────────
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : LIMIT
+  Quantity   : 0.002
+  Price      : 50000.0
+───────────────────────────────
+2026-07-01 17:07:15 | INFO     | bot.client | Placing order: BUY LIMIT BTCUSDT qty=0.002 price=50000.0
+2026-07-01 17:07:15 | DEBUG    | bot.client | futures_create_order request params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.002, 'price': 50000.0, 'timeInForce': 'GTC'}
+2026-07-01 17:07:15 | INFO     | bot.client | Order accepted: orderId=18226079497 status=NEW
+2026-07-01 17:07:15 | DEBUG    | bot.client | futures_create_order response: {'orderId': 18226079497, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJbc37b929ae6f65cab837b1', 'price': '50000.00', 'origQty': '0.0020', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782905835283}
+2026-07-01 17:07:15 | INFO     | bot.orders | Order response details:
+──────── ORDER RESPONSE ───────
+  Order ID     : 18226079497
+  Status       : NEW
+  Orig Qty     : 0.0020
+  Executed Qty : 0.0000
+  Avg Price    : n/a
+───────────────────────────────

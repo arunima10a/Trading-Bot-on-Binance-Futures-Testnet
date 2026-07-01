@@ -1,0 +1,20 @@
+#virtual environment
+.venv/
+venv/
+
+# secrets 
+.env
+
+#Log output 
+logs/*.log
+
+# python bytecode
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# OS 
+.DS_Store
+.idea/
+.vscode/
