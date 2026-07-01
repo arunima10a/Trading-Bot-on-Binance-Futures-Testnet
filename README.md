@@ -1,13 +1,8 @@
 # Binance Futures Testnet Trading Bot
 
-A small, production-style Python command-line application that places **MARKET** and
-**LIMIT** orders (both **BUY** and **SELL**) on the **Binance USDT-M Futures Testnet**.
-It is intentionally structured as a reusable core (`bot/`) with a thin CLI adapter
-(`cli.py`), with input validation, exchange-precision handling, structured logging,
-and graceful error handling.
+A Python command-line application for placing **MARKET** and **LIMIT** orders (BUY and SELL) on the Binance USDT-M Futures Testnet.
 
-> This is **not** a trading strategy or an automated bot. It is a clean, well-structured
-> client for placing individual orders on the Binance Futures testnet.
+The project focuses on clean code, input validation, logging, and error handling rather than trading strategies.
 
 ---
 
@@ -34,15 +29,15 @@ and graceful error handling.
 trading_bot/
 ├── bot/
 │   ├── __init__.py
-│   ├── config.py           # loads + validates env config into an immutable Settings
-│   ├── exceptions.py       # custom exception hierarchy
-│   ├── logging_config.py   # rotating file + console logging setup
-│   ├── client.py           # Binance API wrapper (the only module that talks to the SDK)
-│   ├── validators.py       # pure input validation + step/tick precision
-│   └── orders.py           # order orchestration + response formatting
+│   ├── config.py           
+│   ├── exceptions.py       
+│   ├── logging_config.py   
+│   ├── client.py          
+│   ├── validators.py       
+│   └── orders.py           
 ├── logs/
-│   └── trading_bot.log     # generated at runtime (see submitted sample logs)
-├── cli.py                  # command-line entry point (composition root)
+│   └── trading_bot.log     
+├── cli.py                  
 ├── requirements.txt
 ├── README.md
 ├── .env.example
@@ -51,8 +46,7 @@ trading_bot/
 
 **Design in one line:** `cli.py` (parse + present) → `orders.py` (workflow) →
 `client.py` (Binance I/O), with `config`, `validators`, `logging_config`, and
-`exceptions` as shared foundations. Only `client.py` imports `python-binance`, so
-the rest of the app is decoupled from the SDK.
+`exceptions` as shared foundations. Only `client.py` imports `python-binance`.
 
 ---
 
@@ -187,10 +181,9 @@ A LIMIT order that rests (does not fill immediately) shows `Status: NEW`,
 
 ## Logging
 
-- All runs write to **`logs/trading_bot.log`** (rotating; 1 MB × 5 backups).
-- The **file** captures full detail (DEBUG): request parameters and raw responses.
-- The **console** shows a cleaner INFO view (or DEBUG with `--verbose`).
-- Credentials are never logged.
+- All logs are written to **`logs/trading_bot.log`**.
+- Use `--verbose` to display DEBUG logs in the console.
+- API credentials are never logged.
 
 Sample log files from a MARKET order and a LIMIT order are included with this
 submission (see the `logs/` directory).
@@ -208,17 +201,13 @@ The app fails gracefully with a clear message and a non-zero exit code:
 - **Network failure** (timeout, connection error) → `OrderError`.
 - **Missing configuration** (unset API key/secret) → `ConfigurationError` at startup.
 
-All of the above are subclasses of a single `TradingBotError` base, caught centrally
-in `cli.py`. Unexpected bugs are logged with a full traceback to the log file while
-the user sees a calm message.
+Unexpected errors are logged with a traceback while a user-friendly message is displayed in the terminal.
 
 ---
 
 ## Assumptions
 
-- **Testnet only.** The app targets the Binance USDT-M Futures **testnet** via
-  `python-binance`'s `testnet=True`, which routes futures calls to the testnet host.
-  It is not intended for live trading.
+- **Testnet only.** The application targets the Binance Futures Testnet only.
 - **One-way position mode.** The account is assumed to be in **One-way** mode (the
   default), not **Hedge** mode. In Hedge mode, Binance requires a `positionSide`
   parameter and orders would return error `-4061`; switch the demo account to
