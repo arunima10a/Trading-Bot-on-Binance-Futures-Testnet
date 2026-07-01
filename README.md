@@ -224,7 +224,7 @@ Unexpected errors are logged with a traceback while a user-friendly message is d
 
 ## Tech stack
 
-- Python 3.9+
+- Python 3.13.3 (developed and tested)
 - [`python-binance`](https://github.com/sammchardy/python-binance) — Binance API SDK
 - [`python-dotenv`](https://github.com/theskumar/python-dotenv) — environment config
 - `argparse`, `logging`, `decimal`, `dataclasses` — standard library
